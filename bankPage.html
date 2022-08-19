@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Online Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1 class="text-5xl font-bold text-center p-5">
+      Let's Get Some <span class="text-orange-500">Money</span>
+    </h1>
+    <main class="bg-zinc-400">
+      <div
+        class="box-container w-3/4 mx-auto grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+      >
+        <!-- DEPOSIT -->
+        <div class="deposit-container bg-teal-600 text-center text-white p-8">
+          <h1 class="text-4xl font-bold">Deposit</h1>
+          <h1 class="text-4xl font-bold">$ <span id="previousDepositAmount">0</span></h1>
+        </div>
+        <!-- Withdraw  -->
+        <div
+          class="withdraw-container bg-purple-600 text-center text-white p-8"
+        >
+          <h1 class="text-4xl font-bold">Withdraw</h1>
+          <h1 class="text-4xl font-bold">$ <span id="previousWithdrawAmount">0</span></h1>
+        </div>
+        <!-- Total Balance  -->
+        <div class="balance-container bg-pink-600 text-center text-white p-8">
+          <h1 class="text-4xl font-bold">Balance</h1>
+          <h1 class="text-4xl font-bold">$ <span id="previousBalance">1240</span></h1>
+        </div>
+      </div>
+        <!-- USER DEPOSIT FIELD   -->
+        <div class="userField-container w-3/4 mt-3 mx-auto grid md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2">
+            <div class="deposit-field-container p-3 ">
+              <h1 class="text-3xl font-bold text-white">Please Deposit </h1> 
+              <input type="text" class="p-3 outline outline-offset-0 outline-1 w-full text-xl mb-3 mt-3 rounded-lg" name="" id="depositField" placeholder="$ Amount You Want To Deposit">
+              <button id="btnDeposit" class="outline outline-offset-0 outline-1 px-8 py-3 text-2xl rounded-lg bg-zinc-500 hover:bg-sky-700 text-white  mb-3 ">Deposit</button>
+            </div>
+            <!-- USER WITHDRAW FIELD -->
+            <div class="widtdraw-field-container  p-3  ">
+                <h1 class="text-3xl font-bold text-white">Please Withdraw </h1> 
+                <input type="text" class="p-3 outline outline-offset-0 outline-1 w-full text-xl mb-3 mt-3 rounded-lg" name="" id="withdrawField" placeholder="$ Amount You Want To Withdraw">
+                <button id="btnWithdraw" class="outline outline-offset-0 outline-1 px-8 py-3 text-2xl rounded-lg bg-zinc-500 hover:bg-sky-700 text-white  mb-3 ">Withdraw</button>
+              </div>
+                
+            </div>
+        </div>
+        
+    </main>
+    <script src="deposit.js"></script>
+    <script src="withdraw.js"></script>
+  </body>
+</html>
